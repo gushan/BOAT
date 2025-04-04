@@ -22,20 +22,26 @@ python main_binary.py --model vgg_cifar10_binary --save vgg_cifar10_SGDAT --data
 python main_binary.py --model vgg_cifar100_binary --save vgg_cifar100_SGDAT --dataset cifar100 --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 32 --epochs 200 -b 256
 #### SGDAT in tiny_imagenet
 python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_tiny_imagenet_SGDAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 64 --epochs 100 -b 256
+#### BOAT(ours) in cifar10
+python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_cifar10_BOAT --dataset cifar10 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
+#### BOAT(ours) in cifar100
+python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_cifar100_BOAT --dataset cifar100 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
+#### BOAT(ours) in tiny_imagenet
+python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_tiny_imagenet_BOAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'BOAT','eta':0.13,'weight_decay':1e-3}}" --binarization det --input_size 64 --epochs 100 -b 256
 
 #### On the Resnet-18
 #### SGDAT in cifar10
-python main_binary.py --model vgg_cifar10_binary --save vgg_cifar10_SGDAT --dataset cifar10 --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 32 --epochs 200 -b 256
+python main_binary.py --model resnet_binary --save resnet_cifar10_SGDAT --dataset cifar10 --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 32 --epochs 200 -b 256
 #### SGDAT in cifar100
-python main_binary.py --model vgg_cifar100_binary --save vgg_cifar100_SGDAT --dataset cifar100 --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 32 --epochs 200 -b 256
+python main_binary.py --model resnet_binary --save resnet_cifar100_SGDAT --dataset cifar100 --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 32 --epochs 200 -b 256
 #### SGDAT in tiny_imagenet
 python main_binary.py --model resnet_binary --save resnet_tiny_imagenet_SGDAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 64 --epochs 100 -b 256
 #### BOAT(ours) in cifar10
-python main_binary.py --model vgg_cifar10_binary --save vgg_cifar10_BOAT --dataset cifar10 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
+python main_binary.py --model resnet_binary --save resnet_cifar10_BOAT --dataset cifar10 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
 #### BOAT(ours) in cifar100
-python main_binary.py --model vgg_cifar100_binary --save vgg_cifar100_BOAT --dataset cifar100 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
+python main_binary.py --model resnet_binary --save resnet_cifar100_BOAT --dataset cifar100 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
 #### BOAT(ours) in tiny_imagenet
-python main_binary.py --model resnet_binary --save resnet_tiny_imagenet_BOAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'eta','lr':0.13,'weight_decay':1e-3}}" --binarization det --input_size 64 --epochs 100 -b 256
+python main_binary.py --model resnet_binary --save resnet_tiny_imagenet_BOAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'BOAT','eta':0.13,'weight_decay':1e-3}}" --binarization det --input_size 64 --epochs 100 -b 256
 ### Experimental Result
 <img width="866" alt="image" src="https://github.com/user-attachments/assets/95fc4938-b0c7-4e3c-8b2d-eb0a3ab08c50" />
 
