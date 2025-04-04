@@ -6,7 +6,7 @@ import pandas as pd
 from bokeh.io import output_file, save, show
 from bokeh.plotting import figure
 from bokeh.layouts import column
-from optimizers import SGDAT, Bop,Bop2ndOrder
+from optimizers import SGDAT, Bop, Bop2ndOrder, BOAT
 
 
 
@@ -110,6 +110,7 @@ __optimizers = {
     'Bop': Bop.Bop,
     'Bop2ndOrder': Bop2ndOrder.Bop2ndOrder,
     'SGDAT': SGDAT.SGDAT,
+    'BOAT': BOAT.BOAT,
 }
 
 
