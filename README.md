@@ -1,7 +1,7 @@
-# SGDAT
-Implementation for paper "SGDAT: An Optimization Method for Binary Neural Networks".
+# BOAT
+Implementation for paper "BOAT: Binary Optimizer with Adaptive Thresholds".
 
-The code is based on https://github.com/itayhubara/BinaryNet.pytorch.  
+The code is based on https://github.com/itayhubara/BinaryNet.pytorch and https://github.com/gushan/SGDAT.  
 Please install torch and torchvision by following the instructions at: http://pytorch.org/.   
 
 ### Run Command
@@ -33,5 +33,5 @@ python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_tiny_imagenet_
 #### SGDAT(ours) in tiny_imagenet
 python main_binary.py --model resnet_binary --save resnet_tiny_imagenet_SGDAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 64 --epochs 100 -b 256
 ### Experimental Result
-<img width="1387" alt="image" src="https://user-images.githubusercontent.com/5879042/188252905-96c01cfd-9ca2-4862-8b64-b5a7c2966a12.png">
+<img width="866" alt="image" src="https://github.com/user-attachments/assets/95fc4938-b0c7-4e3c-8b2d-eb0a3ab08c50" />
 
