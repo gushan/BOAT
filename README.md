@@ -23,9 +23,9 @@ python main_binary.py --model vgg_cifar100_binary --save vgg_cifar100_SGDAT --da
 #### SGDAT in tiny_imagenet
 python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_tiny_imagenet_SGDAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'SGDAT','lr':1e-4,'threshold':1e-7}}" --binarization det --input_size 64 --epochs 100 -b 256
 #### BOAT(ours) in cifar10
-python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_cifar10_BOAT --dataset cifar10 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
+python main_binary.py --model vgg_cifar10_binary --save vgg_cifar10_BOAT --dataset cifar10 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
 #### BOAT(ours) in cifar100
-python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_cifar100_BOAT --dataset cifar100 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
+python main_binary.py --model vgg_cifar100_binary --save vgg_cifar100_BOAT --dataset cifar100 --bin_regime "{0: {'optimizer':'BOAT','eta':0.1,'weight_decay':1e-3}}" --binarization det --input_size 32 --epochs 200 -b 256
 #### BOAT(ours) in tiny_imagenet
 python main_binary.py --model vgg_tiny_imagenet_binary --save vgg_tiny_imagenet_BOAT --dataset tiny_imagenet --bin_regime "{0: {'optimizer':'BOAT','eta':0.13,'weight_decay':1e-3}}" --binarization det --input_size 64 --epochs 100 -b 256
 
